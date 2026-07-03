@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>에너지 데이터로 본 현재 문제상황</title>
+  <meta name="description" content="워크숍용 에너지 데이터 표본을 바탕으로 문제상황과 해결방안을 정리한 발표 슬라이드입니다.">
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #111111;
+      --muted: #5f6368;
+      --rule: #d8dde5;
+      --panel: #f6f7f9;
+      --accent: #ff6b35;
+      --blue: #2563eb;
+      --green: #059669;
+      font-family: "Malgun Gothic", "Apple SD Gothic Neo", system-ui, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: #ffffff;
+      color: var(--ink);
+    }
+
+    header {
+      padding: 48px clamp(20px, 6vw, 72px) 28px;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .eyebrow {
+      margin: 0 0 16px;
+      color: var(--muted);
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    h1 {
+      max-width: 980px;
+      margin: 0;
+      font-size: clamp(34px, 6vw, 64px);
+      line-height: 1.08;
+      letter-spacing: 0;
+    }
+
+    .summary {
+      max-width: 880px;
+      margin: 22px 0 0;
+      color: #2f343b;
+      font-size: clamp(18px, 2.4vw, 24px);
+      line-height: 1.55;
+      font-weight: 700;
+    }
+
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      max-width: 980px;
+      margin-top: 34px;
+    }
+
+    .metric {
+      border-top: 4px solid var(--accent);
+      padding-top: 14px;
+    }
+
+    .metric:nth-child(1) {
+      border-color: var(--blue);
+    }
+
+    .metric:nth-child(3) {
+      border-color: var(--green);
+    }
+
+    .metric strong {
+      display: block;
+      font-size: clamp(28px, 4vw, 44px);
+      line-height: 1;
+    }
+
+    .metric span {
+      display: block;
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.45;
+    }
+
+    main {
+      padding: 34px clamp(20px, 6vw, 72px) 64px;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 28px;
+    }
+
+    .actions a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 42px;
+      padding: 0 16px;
+      border: 1px solid var(--ink);
+      color: var(--ink);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 15px;
+    }
+
+    .actions a.primary {
+      background: var(--ink);
+      color: #ffffff;
+    }
+
+    .slides {
+      display: grid;
+      gap: 28px;
+    }
+
+    figure {
+      margin: 0;
+      padding: 0;
+      background: var(--panel);
+      border: 1px solid var(--rule);
+    }
+
+    figure img {
+      display: block;
+      width: 100%;
+      height: auto;
+      background: #ffffff;
+    }
+
+    figcaption {
+      padding: 12px 16px 14px;
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    footer {
+      padding: 0 clamp(20px, 6vw, 72px) 48px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 760px) {
+      .metrics {
+        grid-template-columns: 1fr;
+      }
+
+      header {
+        padding-top: 36px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <p class="eyebrow">KSU Energy Workshop</p>
+    <h1>에너지 데이터로 본 현재 문제상황</h1>
+    <p class="summary">수요 피크, 재생에너지 변동성, 부문별 에너지 수요 관리를 함께 봐야 합니다.</p>
+    <section class="metrics" aria-label="핵심 지표">
+      <div class="metric">
+        <strong>15.9%</strong>
+        <span>09시 대비 15시 전력수요 증가</span>
+      </div>
+      <div class="metric">
+        <strong>6.1%</strong>
+        <span>15시 예비율 최저점</span>
+      </div>
+      <div class="metric">
+        <strong>63.4→7.2</strong>
+        <span>태양광 발전량 MWh, 12시에서 17시</span>
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <nav class="actions" aria-label="자료 링크">
+      <a class="primary" href="assets/energy_problem_solutions_deck.pptx" download>발표자료 PPTX 다운로드</a>
+      <a href="#slides">슬라이드 보기</a>
+    </nav>
+
+    <section id="slides" class="slides" aria-label="발표 슬라이드">
+      <figure>
+        <img src="assets/slide-01.png" alt="에너지 데이터로 본 현재 문제상황 표지 슬라이드">
+        <figcaption>01. 문제 제기</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/slide-02.png" alt="폭염 오후 전력수요 증가와 예비율 하락을 보여주는 슬라이드">
+        <figcaption>02. 전력수급 문제</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/slide-03.png" alt="태양광 발전량과 일사량 변동을 보여주는 슬라이드">
+        <figcaption>03. 재생에너지 변동성</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/slide-04.png" alt="제조 상업 주거 부문별 에너지 사용 변화를 보여주는 슬라이드">
+        <figcaption>04. 최종 에너지 사용</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/slide-05.png" alt="단기 중기 장기 해결방안을 정리한 슬라이드">
+        <figcaption>05. 해결방안</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/slide-06.png" alt="실행 우선순위 세 가지를 정리한 슬라이드">
+        <figcaption>06. 실행 우선순위</figcaption>
+      </figure>
+    </section>
+  </main>
+
+  <footer>
+    <p>자료: 워크숍용 축소 표본 CSV 3종. 이 페이지는 교육용 발표자료를 웹에서 바로 볼 수 있도록 만든 정적 GitHub Pages용 사이트입니다.</p>
+  </footer>
+</body>
+</html>
